@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="HastanelerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Doktorlar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Doktorlar" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Hastalar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Hasta_ad" Type="nvarchar(max)" />
+          <Property Name="Hasta_soyad" Type="nvarchar(max)" />
+          <Property Name="HastaTC" Type="nvarchar(max)" />
+          <Property Name="Hasta_cinsiyet" Type="nvarchar(max)" />
+          <Property Name="Hasta_dogum_tarih" Type="date" />
+          <Property Name="Hasta_mail" Type="nvarchar(max)" />
+          <Property Name="Hasta_telefon" Type="nvarchar(max)" />
+          <Property Name="Hasta_sifre" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="HastaneAdi">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HastaneAdi" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="İller">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="İller" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Kan_grubu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Kan_grubu" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Personeller">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Personel_ad" Type="nvarchar(max)" />
+          <Property Name="Personel_soyad" Type="nvarchar(max)" />
+          <Property Name="Personel_TC" Type="nvarchar(max)" />
+          <Property Name="Personel_cinsiyet" Type="nvarchar(max)" />
+          <Property Name="Personel_dogum_tarih" Type="date" />
+          <Property Name="Personel_mail" Type="nvarchar(max)" />
+          <Property Name="Personel_telefon" Type="nvarchar(max)" />
+          <Property Name="Personel_sifre" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="RaporAd">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RaporAd" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Tahlil_adi">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tahlil_adi" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityContainer Name="HastanelerModelStoreContainer">
+          <EntitySet Name="Doktorlar" EntityType="Self.Doktorlar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Hastalar" EntityType="Self.Hastalar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HastaneAdi" EntityType="Self.HastaneAdi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="İller" EntityType="Self.İller" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Kan_grubu" EntityType="Self.Kan_grubu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Personeller" EntityType="Self.Personeller" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RaporAd" EntityType="Self.RaporAd" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tahlil_adi" EntityType="Self.Tahlil_adi" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HastanelerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Doktorlar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Doktorlar1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Hastalar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Hasta_ad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Hasta_soyad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HastaTC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Hasta_cinsiyet" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Hasta_dogum_tarih" Type="DateTime" Precision="0" />
+          <Property Name="Hasta_mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Hasta_telefon" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Hasta_sifre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="HastaneAdi">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HastaneAdi1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="İller">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="İller1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Kan_grubu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Kan_grubu1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Personeller">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Personel_ad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Personel_soyad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Personel_TC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Personel_cinsiyet" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Personel_dogum_tarih" Type="DateTime" Precision="0" />
+          <Property Name="Personel_mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Personel_telefon" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Personel_sifre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="RaporAd">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RaporAd1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Tahlil_adi">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tahlil_adi1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="hastanelerEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Doktorlar" EntityType="Self.Doktorlar" />
+          <EntitySet Name="Hastalar" EntityType="Self.Hastalar" />
+          <EntitySet Name="HastaneAdi" EntityType="Self.HastaneAdi" />
+          <EntitySet Name="İller" EntityType="Self.İller" />
+          <EntitySet Name="Kan_grubu" EntityType="Self.Kan_grubu" />
+          <EntitySet Name="Personeller" EntityType="Self.Personeller" />
+          <EntitySet Name="RaporAd" EntityType="Self.RaporAd" />
+          <EntitySet Name="Tahlil_adi" EntityType="Self.Tahlil_adi" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HastanelerModelStoreContainer" CdmEntityContainer="hastanelerEntities">
+          <EntitySetMapping Name="Doktorlar">
+            <EntityTypeMapping TypeName="HastanelerModel.Doktorlar">
+              <MappingFragment StoreEntitySet="Doktorlar">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Doktorlar1" ColumnName="Doktorlar" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Hastalar">
+            <EntityTypeMapping TypeName="HastanelerModel.Hastalar">
+              <MappingFragment StoreEntitySet="Hastalar">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Hasta_ad" ColumnName="Hasta_ad" />
+                <ScalarProperty Name="Hasta_soyad" ColumnName="Hasta_soyad" />
+                <ScalarProperty Name="HastaTC" ColumnName="HastaTC" />
+                <ScalarProperty Name="Hasta_cinsiyet" ColumnName="Hasta_cinsiyet" />
+                <ScalarProperty Name="Hasta_dogum_tarih" ColumnName="Hasta_dogum_tarih" />
+                <ScalarProperty Name="Hasta_mail" ColumnName="Hasta_mail" />
+                <ScalarProperty Name="Hasta_telefon" ColumnName="Hasta_telefon" />
+                <ScalarProperty Name="Hasta_sifre" ColumnName="Hasta_sifre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HastaneAdi">
+            <EntityTypeMapping TypeName="HastanelerModel.HastaneAdi">
+              <MappingFragment StoreEntitySet="HastaneAdi">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="HastaneAdi1" ColumnName="HastaneAdi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="İller">
+            <EntityTypeMapping TypeName="HastanelerModel.İller">
+              <MappingFragment StoreEntitySet="İller">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="İller1" ColumnName="İller" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kan_grubu">
+            <EntityTypeMapping TypeName="HastanelerModel.Kan_grubu">
+              <MappingFragment StoreEntitySet="Kan_grubu">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Kan_grubu1" ColumnName="Kan_grubu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Personeller">
+            <EntityTypeMapping TypeName="HastanelerModel.Personeller">
+              <MappingFragment StoreEntitySet="Personeller">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Personel_ad" ColumnName="Personel_ad" />
+                <ScalarProperty Name="Personel_soyad" ColumnName="Personel_soyad" />
+                <ScalarProperty Name="Personel_TC" ColumnName="Personel_TC" />
+                <ScalarProperty Name="Personel_cinsiyet" ColumnName="Personel_cinsiyet" />
+                <ScalarProperty Name="Personel_dogum_tarih" ColumnName="Personel_dogum_tarih" />
+                <ScalarProperty Name="Personel_mail" ColumnName="Personel_mail" />
+                <ScalarProperty Name="Personel_telefon" ColumnName="Personel_telefon" />
+                <ScalarProperty Name="Personel_sifre" ColumnName="Personel_sifre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RaporAd">
+            <EntityTypeMapping TypeName="HastanelerModel.RaporAd">
+              <MappingFragment StoreEntitySet="RaporAd">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RaporAd1" ColumnName="RaporAd" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tahlil_adi">
+            <EntityTypeMapping TypeName="HastanelerModel.Tahlil_adi">
+              <MappingFragment StoreEntitySet="Tahlil_adi">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Tahlil_adi1" ColumnName="Tahlil_adi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

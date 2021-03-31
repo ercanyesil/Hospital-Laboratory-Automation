@@ -1,0 +1,530 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{51EB1171-30CE-498C-BB32-0F23E3E4A50F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Proje</RootNamespace>
+    <AssemblyName>Proje</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Graphicloads-Medical-Health-Hospital-sign.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Doktorlar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="duyurular\duyurular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="duyurular\duyurular.Designer.cs">
+      <DependentUpon>duyurular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hastalar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneAdi.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Kan_grubu.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Login\uye_giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\uye_giris.Designer.cs">
+      <DependentUpon>uye_giris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\yeni_uye_giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\yeni_uye_giris.Designer.cs">
+      <DependentUpon>yeni_uye_giris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="odeme\Kredi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="odeme\Kredi.Designer.cs">
+      <DependentUpon>Kredi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="odeme\Nakit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="odeme\Nakit.Designer.cs">
+      <DependentUpon>Nakit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personeller.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="randevu\Randevu_al.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="randevu\Randevu_al.Designer.cs">
+      <DependentUpon>Randevu_al.cs</DependentUpon>
+    </Compile>
+    <Compile Include="randevu\Randevu_iptal_et.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="randevu\Randevu_iptal_et.Designer.cs">
+      <DependentUpon>Randevu_iptal_et.cs</DependentUpon>
+    </Compile>
+    <Compile Include="randevu\Randevu_listesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="randevu\Randevu_listesi.Designer.cs">
+      <DependentUpon>Randevu_listesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaporAd.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rapor\e-imza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rapor\e-imza.Designer.cs">
+      <DependentUpon>e-imza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rapor\musteri_erisimli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rapor\musteri_erisimli.Designer.cs">
+      <DependentUpon>musteri_erisimli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rapor\yonetim_erisimli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rapor\yonetim_erisimli.Designer.cs">
+      <DependentUpon>yonetim_erisimli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tahlil_adi.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Genetik_tahliller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Genetik_tahliller.Designer.cs">
+      <DependentUpon>Genetik_tahliller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Genetik_tahlil_giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Genetik_tahlil_giris.Designer.cs">
+      <DependentUpon>Genetik_tahlil_giris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Kan_tahlili_girisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Kan_tahlili_girisi.Designer.cs">
+      <DependentUpon>Kan_tahlili_girisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Kan_tahlilleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Kan_tahlilleri.Designer.cs">
+      <DependentUpon>Kan_tahlilleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Mikroskopik_tahliller\Aside-ph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Mikroskopik_tahliller\Aside-ph.Designer.cs">
+      <DependentUpon>Aside-ph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Mikroskopik_tahliller\Aside-ph_giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Mikroskopik_tahliller\Aside-ph_giris.Designer.cs">
+      <DependentUpon>Aside-ph_giris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Mikroskopik_tahliller\Enfeksiyon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Mikroskopik_tahliller\Enfeksiyon.Designer.cs">
+      <DependentUpon>Enfeksiyon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Mikroskopik_tahliller\Enfeksiyon_giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Mikroskopik_tahliller\Enfeksiyon_giris.Designer.cs">
+      <DependentUpon>Enfeksiyon_giris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Mikroskopik_tahliller\Keton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Mikroskopik_tahliller\Keton.Designer.cs">
+      <DependentUpon>Keton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Mikroskopik_tahliller\Keton_girsi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Mikroskopik_tahliller\Keton_girsi.Designer.cs">
+      <DependentUpon>Keton_girsi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Mikroskopik_tahliller\Protein.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Mikroskopik_tahliller\Protein.Designer.cs">
+      <DependentUpon>Protein.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Mikroskopik_tahliller\Protein_giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Mikroskopik_tahliller\Protein_giris.Designer.cs">
+      <DependentUpon>Protein_giris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Mikroskopik_tahliller\Seker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Mikroskopik_tahliller\Seker.Designer.cs">
+      <DependentUpon>Seker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Mikroskopik_tahliller\Seker_giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Mikroskopik_tahliller\Seker_giris.Designer.cs">
+      <DependentUpon>Seker_giris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Patoloji_tahlilleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Patoloji_tahlilleri.Designer.cs">
+      <DependentUpon>Patoloji_tahlilleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Patoloji_tahlil_giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Patoloji_tahlil_giris.Designer.cs">
+      <DependentUpon>Patoloji_tahlil_giris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Radyolojik_tahliller\Bt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Radyolojik_tahliller\Bt.Designer.cs">
+      <DependentUpon>Bt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Radyolojik_tahliller\BT_giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Radyolojik_tahliller\BT_giris.Designer.cs">
+      <DependentUpon>BT_giris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Radyolojik_tahliller\Mr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Radyolojik_tahliller\Mr.Designer.cs">
+      <DependentUpon>Mr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Radyolojik_tahliller\Mr_giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Radyolojik_tahliller\Mr_giris.Designer.cs">
+      <DependentUpon>Mr_giris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Radyolojik_tahliller\Röntgen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Radyolojik_tahliller\Röntgen.Designer.cs">
+      <DependentUpon>Röntgen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Radyolojik_tahliller\Röntgen_giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Radyolojik_tahliller\Röntgen_giris.Designer.cs">
+      <DependentUpon>Röntgen_giris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Radyolojik_tahliller\Usg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Radyolojik_tahliller\Usg.Designer.cs">
+      <DependentUpon>Usg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Radyolojik_tahliller\Usg_giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tahlil_islemleri\Radyolojik_tahliller\Usg_giris.Designer.cs">
+      <DependentUpon>Usg_giris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tahlil_islemleri\İdrar_tahlili_girisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tahlil_islemleri\İdrar_tahlili_girisi.Designer.cs">
+      <DependentUpon>İdrar_tahlili_girisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tahlil_islemleri\İdrar_tahlilleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tahlil_islemleri\İdrar_tahlilleri.Designer.cs">
+      <DependentUpon>İdrar_tahlilleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="teknik_hizmet\Sik_sorulanlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="teknik_hizmet\Sik_sorulanlar.Designer.cs">
+      <DependentUpon>Sik_sorulanlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="teknik_hizmet\İletisim\E-mail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="teknik_hizmet\İletisim\E-mail.Designer.cs">
+      <DependentUpon>E-mail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="teknik_hizmet\İletisim\Telefon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="teknik_hizmet\İletisim\Telefon.Designer.cs">
+      <DependentUpon>Telefon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="İller.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="duyurular\duyurular.resx">
+      <DependentUpon>duyurular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\uye_giris.resx">
+      <DependentUpon>uye_giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\yeni_uye_giris.resx">
+      <DependentUpon>yeni_uye_giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="odeme\Kredi.resx">
+      <DependentUpon>Kredi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="odeme\Nakit.resx">
+      <DependentUpon>Nakit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="randevu\Randevu_al.resx">
+      <DependentUpon>Randevu_al.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="randevu\Randevu_iptal_et.resx">
+      <DependentUpon>Randevu_iptal_et.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="randevu\Randevu_listesi.resx">
+      <DependentUpon>Randevu_listesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rapor\e-imza.resx">
+      <DependentUpon>e-imza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rapor\musteri_erisimli.resx">
+      <DependentUpon>musteri_erisimli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rapor\yonetim_erisimli.resx">
+      <DependentUpon>yonetim_erisimli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tahlil_islemleri\Genetik_tahliller.resx">
+      <DependentUpon>Genetik_tahliller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tahlil_islemleri\Genetik_tahlil_giris.resx">
+      <DependentUpon>Genetik_tahlil_giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tahlil_islemleri\Kan_tahlili_girisi.resx">
+      <DependentUpon>Kan_tahlili_girisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tahlil_islemleri\Kan_tahlilleri.resx">
+      <DependentUpon>Kan_tahlilleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tahlil_islemleri\Mikroskopik_tahliller\Aside-ph.resx">
+      <DependentUpon>Aside-ph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tahlil_islemleri\Mikroskopik_tahliller\Aside-ph_giris.resx">
+      <DependentUpon>Aside-ph_giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tahlil_islemleri\Mikroskopik_tahliller\Enfeksiyon.resx">
+      <DependentUpon>Enfeksiyon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tahlil_islemleri\Mikroskopik_tahliller\Enfeksiyon_giris.resx">
+      <DependentUpon>Enfeksiyon_giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tahlil_islemleri\Mikroskopik_tahliller\Keton.resx">
+      <DependentUpon>Keton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tahlil_islemleri\Mikroskopik_tahliller\Keton_girsi.resx">
+      <DependentUpon>Keton_girsi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tahlil_islemleri\Mikroskopik_tahliller\Protein.resx">
+      <DependentUpon>Protein.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tahlil_islemleri\Mikroskopik_tahliller\Protein_giris.resx">
+      <DependentUpon>Protein_giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tahlil_islemleri\Mikroskopik_tahliller\Seker.resx">
+      <DependentUpon>Seker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tahlil_islemleri\Mikroskopik_tahliller\Seker_giris.resx">
+      <DependentUpon>Seker_giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tahlil_islemleri\Patoloji_tahlilleri.resx">
+      <DependentUpon>Patoloji_tahlilleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tahlil_islemleri\Patoloji_tahlil_giris.resx">
+      <DependentUpon>Patoloji_tahlil_giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tahlil_islemleri\Radyolojik_tahliller\Bt.resx">
+      <DependentUpon>Bt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tahlil_islemleri\Radyolojik_tahliller\BT_giris.resx">
+      <DependentUpon>BT_giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tahlil_islemleri\Radyolojik_tahliller\Mr.resx">
+      <DependentUpon>Mr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tahlil_islemleri\Radyolojik_tahliller\Mr_giris.resx">
+      <DependentUpon>Mr_giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tahlil_islemleri\Radyolojik_tahliller\Röntgen.resx">
+      <DependentUpon>Röntgen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tahlil_islemleri\Radyolojik_tahliller\Röntgen_giris.resx">
+      <DependentUpon>Röntgen_giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tahlil_islemleri\Radyolojik_tahliller\Usg.resx">
+      <DependentUpon>Usg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tahlil_islemleri\Radyolojik_tahliller\Usg_giris.resx">
+      <DependentUpon>Usg_giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tahlil_islemleri\İdrar_tahlili_girisi.resx">
+      <DependentUpon>İdrar_tahlili_girisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tahlil_islemleri\İdrar_tahlilleri.resx">
+      <DependentUpon>İdrar_tahlilleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teknik_hizmet\Sik_sorulanlar.resx">
+      <DependentUpon>Sik_sorulanlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teknik_hizmet\İletisim\E-mail.resx">
+      <DependentUpon>E-mail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teknik_hizmet\İletisim\Telefon.resx">
+      <DependentUpon>Telefon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Graphicloads-Medical-Health-Hospital-sign.ico" />
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
